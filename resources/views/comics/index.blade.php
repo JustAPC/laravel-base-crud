@@ -22,14 +22,14 @@
                     <td class="col-4">
                         <p>{{ $comic->description }}</p>
                     </td>
-                    <td class="">{{ $comic->price }}</td>
+                    <td class="">{{ $comic->price }}$</td>
                     <td class="col-1">{{ $comic->series }}</td>
                     <td class="">{{ $comic->sale_date }}</td>
                     <td class="">{{ $comic->type }}</td>
                     <td class="">
-                        <a href="" class="btn btn-success">View</a>
-                        <a href="" class="btn btn-primary">Edit</a>
-                        <a href="" class="btn btn-danger">Remove</a>
+                        <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success">View</a>
+                        <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Edit</a>
+                        <a href="{{ route('comics.destroy', $comic->id) }}" class="btn btn-danger">Remove</a>
                     </td>
 
                 </tr>
