@@ -29,7 +29,12 @@
                     <td class="">
                         <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success">View</a>
                         <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Edit</a>
-                        <a href="{{ route('comics.destroy', $comic->id) }}" class="btn btn-danger">Remove</a>
+                        <input type="submit" class="btn btn-danger" value="Remove"></input>
+                        {{-- <form action="{{ route('comics.destroy', ['id' => $comic->id]) }} method=" POST">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" class="btn btn-danger">Remove</input>
+                        </form> --}}
                     </td>
 
                 </tr>
