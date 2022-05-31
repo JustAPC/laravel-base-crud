@@ -1,1 +1,11 @@
-//
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.col-4 p {
+    max-height: 220px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+        ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
