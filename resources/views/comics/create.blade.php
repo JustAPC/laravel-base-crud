@@ -15,8 +15,6 @@
                     <input type="text" id="type" name="type" class="me-3">
 
 
-                    <label for="thumb">Thumb: </label>
-                    <input type="text" id="thumb" name="thumb" class="me-3">
                 </div>
 
                 <div class="py-5">
@@ -30,12 +28,20 @@
                     <input type="date" id="sale_date" name="sale_date" class="me-3">
                 </div>
 
-                <div class="py-5">
-                    <label for="description">Description: </label>
-                    <input type="text" id="description" name="description" class="me-3">
+                <div class="py-5 d-flex justify-content-center">
 
-                    <button type="submit" class="btn btn-primary">Store Comic</button>
+                    <div>
+                        <p><label for="description">Description: </label></p>
+                        <textarea name="description" id="" cols="30" rows="10" class="me-5"></textarea>
+                    </div>
+
+                    <div>
+                        <p><label for="thumb">Thumb: </label></p>
+                        <textarea name="thumb" id="" cols="30" rows="5"></textarea>
+                    </div>
                 </div>
+
+                <button type="submit" class="btn btn-primary">Store Comic</button>
 
             </form>
         </div>
