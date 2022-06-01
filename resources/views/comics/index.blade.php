@@ -17,24 +17,23 @@
         <tbody>
             @foreach ($comics as $comic)
                 <tr>
-                    <td class=""><img src="{{ $comic->thumb }}" alt="" height="220px"></td>
-                    <td class="col-1">{{ $comic->title }}</td>
-                    <td class="col-4">
+                    <td class="border border-dark"><img src="{{ $comic->thumb }}" alt="" height="220px"></td>
+                    <td class="col-1 border border-dark">{{ $comic->title }}</td>
+                    <td class="col-4 border border-dark">
                         <p>{{ $comic->description }}</p>
                     </td>
-                    <td class="">{{ $comic->price }}$</td>
-                    <td class="col-1">{{ $comic->series }}</td>
-                    <td class="">{{ $comic->sale_date }}</td>
-                    <td class="">{{ $comic->type }}</td>
-                    <td class="">
+                    <td class="border border-dark">{{ $comic->price }}$</td>
+                    <td class="col-1 border border-dark">{{ $comic->series }}</td>
+                    <td class="border border-dark">{{ $comic->sale_date }}</td>
+                    <td class="border border-dark">{{ $comic->type }}</td>
+                    <td class="border border-dark">
                         <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success">View</a>
                         <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Edit</a>
-                        <input type="submit" class="btn btn-danger" value="Remove"></input>
-                        {{-- <form action="{{ route('comics.destroy', ['id' => $comic->id]) }} method=" POST">
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="mt-3">
                             @csrf
                             @method('DELETE')
-                            <input type="submit" class="btn btn-danger">Remove</input>
-                        </form> --}}
+                            <input type="submit" class="btn btn-danger" value="Remove">
+                        </form>
                     </td>
 
                 </tr>

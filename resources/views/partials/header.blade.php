@@ -19,7 +19,8 @@
 
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="Search for a comic" aria-label="Search"
+                    name="searchedComic">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>

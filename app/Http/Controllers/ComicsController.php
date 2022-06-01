@@ -17,6 +17,7 @@ class ComicsController extends Controller
     {
         $comics = Comic::All();
 
+
         return view('comics.index', compact('comics'));
     }
 
@@ -44,7 +45,7 @@ class ComicsController extends Controller
         $new_comic->fill($data);
         $new_comic->save();
 
-        return redirect()->route('comics.show', $new_comic);
+        return redirect()->route('comics.index', $new_comic);
     }
 
     /**
@@ -91,6 +92,6 @@ class ComicsController extends Controller
     {
         $comic->delete();
 
-        return redirect()->route('comics.index', $comic);
+        return redirect()->route('comics.index', compact('comic'));
     }
 }
