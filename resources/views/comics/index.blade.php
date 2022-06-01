@@ -1,6 +1,17 @@
 @extends('layouts.layout-comics')
 
+@section('script-message-delete')
+    <script defer src="{{ asset('js/deleteAlert.js') }}"></script>
+@endsection
+
 @section('content')
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    <a href="{{ route('comics.create') }}" class="btn btn-success my-3">New Comic</a>
     <table class="table">
         <thead>
             <tr>
@@ -29,13 +40,13 @@
                     <td class="border border-dark">
                         <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success">View</a>
                         <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary">Edit</a>
-                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="mt-3">
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="mt-3 delete-form"
+                            data-name="{{ $comic->title }}">
                             @csrf
                             @method('DELETE')
                             <input type="submit" class="btn btn-danger" value="Remove">
                         </form>
                     </td>
-
                 </tr>
             @endforeach
         </tbody>

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href=" {{ asset('css/app.css') }} " />
     <script defer src=" {{ asset('js/app.js') }} "></script>
+    @yield('script-message-delete')
     <title>Comics</title>
 </head>
 

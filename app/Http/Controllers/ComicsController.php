@@ -84,7 +84,7 @@ class ComicsController extends Controller
         $comic->fill($data);
         $comic->save();
 
-        return redirect()->route('comics.show', $comic);
+        return redirect()->route('comics.show', $comic)->with('message', "$comic->title è stato modificato con successo");
     }
 
     /**
@@ -97,6 +97,6 @@ class ComicsController extends Controller
     {
         $comic->delete();
 
-        return redirect()->route('comics.index', compact('comic'));
+        return redirect()->route('comics.index', compact('comic'))->with('message', "$comic->title è stato eliminato con successo");
     }
 }

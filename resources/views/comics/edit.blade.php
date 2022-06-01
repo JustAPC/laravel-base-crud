@@ -34,7 +34,7 @@
                     <div>
                         <p><label for="description">Description: </label></p>
                         <textarea name="description" id="" cols="30" rows="10" class="me-5">
-                            {{ $comic->description }}
+                            {{!! $comic->description !!}}
                         </textarea>
 
                     </div>
