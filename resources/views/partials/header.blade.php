@@ -22,7 +22,7 @@
                         </li>
 
                     </ul>
-                    <form class="d-flex">
+                    <form class="d-flex" method="GET">
                         <input class="form-control me-2" type="search" placeholder="Search for a comic"
                             aria-label="Search" name="searchedComic">
                         <button class="btn btn-outline-success" type="submit">Search</button>
